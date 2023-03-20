@@ -1,0 +1,23 @@
+<div class="flex items-center justify-center w-full">
+    <div class="mt-20 px-8 py-6 mt-4 text-left shadow-lg border font-light">
+
+    <h1 class="text-center text-xl">Forgot your password?</h1>
+
+    <.form let={f} for={:user} action={Routes.user_reset_password_path(@conn, :create)}>
+
+    <div class="pt-4">
+      <%= label f, :email %>
+      <%= email_input f, :email, required: true, class: "w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600 font-light" %>
+    </div>
+
+      <div>
+        <%= submit "Reset password", class: "px-6 py-2 mt-4 border bg-gray-100 rounded" %>
+      </div>
+    </.form>
+
+    <p class="pt-4">
+      <%= link "Register", to: Routes.user_registration_path(@conn, :new) %> |
+      <%= link "Log in", to: Routes.user_session_path(@conn, :new) %>
+    </p>
+  </div>
+</div>
