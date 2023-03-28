@@ -95,6 +95,7 @@ defmodule CarafeWeb.Router do
   scope "/", CarafeWeb do
     pipe_through [:browser, :require_authenticated_user]
 
+    get "/users/settings/edit_bio", UserSettingsController, :edit_bio
     post "/users/settings/edit_bio", UserSettingsController, :edit_bio
 
     get "/users/settings", UserSettingsController, :edit
