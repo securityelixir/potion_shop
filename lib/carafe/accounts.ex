@@ -108,6 +108,10 @@ defmodule Carafe.Accounts do
     User.email_changeset(user, attrs)
   end
 
+  def change_user_bio(user, attrs \\ %{}) do
+    User.bio_changeset(user, attrs)
+  end
+
   @doc """
   Emulates that the email will change without actually changing
   it in the database.
@@ -213,6 +217,14 @@ defmodule Carafe.Accounts do
       {:ok, %{user: user}} -> {:ok, user}
       {:error, :user, changeset, _} -> {:error, changeset}
     end
+  end
+
+  def update_user_bio(user, params) do
+    changeset =
+      user
+      |> User.bio_changeset(params)
+
+    Repo.update(changeset)
   end
 
   ## Session

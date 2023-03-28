@@ -10,6 +10,17 @@ defmodule CarafeWeb.UserSettingsController do
     render(conn, "edit.html")
   end
 
+  def edit_bio(conn, %{"user" => params}) do
+    case Accounts.update_user_bio(conn.assigns.current_user, params) do
+      {:ok, _bio} ->
+        conn
+        |> put_flash(:info, "Bio Update Successful")
+        |> redirect(to: Routes.user_settings_path(conn, :edit))
+      {:error, changeset} ->
+        render(conn, "edit.html", bio_changeset: changeset)
+    end
+  end
+
   def update(conn, %{"action" => "update_email"} = params) do
     %{"current_password" => password, "user" => user_params} = params
     user = conn.assigns.current_user
@@ -70,5 +81,6 @@ defmodule CarafeWeb.UserSettingsController do
     conn
     |> assign(:email_changeset, Accounts.change_user_email(user))
     |> assign(:password_changeset, Accounts.change_user_password(user))
+    |> assign(:bio_changeset, Accounts.change_user_bio(user))
   end
 end

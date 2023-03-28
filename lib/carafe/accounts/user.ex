@@ -7,6 +7,7 @@ defmodule Carafe.Accounts.User do
     field :password, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
+    field :bio, :string
 
     timestamps()
   end
@@ -101,6 +102,12 @@ defmodule Carafe.Accounts.User do
     |> cast(attrs, [:password])
     |> validate_confirmation(:password, message: "does not match password")
     |> validate_password(opts)
+  end
+
+  def bio_changeset(user, attrs) do
+    user
+    |> cast(attrs, [:bio])
+    |> validate_required([:bio])
   end
 
   @doc """

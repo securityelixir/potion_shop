@@ -1,0 +1,4 @@
+<h2 class="pt-4 pb-4 text-xl">User Page - <%= @email %></h2>
+<div>
+<%= @bio %>
+</div>
