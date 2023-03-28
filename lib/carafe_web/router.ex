@@ -35,8 +35,10 @@ defmodule CarafeWeb.Router do
   scope "/", CarafeWeb do
     pipe_through [:browser_auth, :require_authenticated_user]
 
-    get "/:id", PotionController, :show
-    post "/:id", PotionController, :create_review
+    get "/potion/:id", PotionController, :show
+    post "/potion/review/:id", PotionController, :create_review
+
+    get "/users/view/:id", UserController, :show
   end
 
   # Other scopes may use custom stacks.
@@ -92,6 +94,9 @@ defmodule CarafeWeb.Router do
 
   scope "/", CarafeWeb do
     pipe_through [:browser, :require_authenticated_user]
+
+    get "/users/settings/edit_bio", UserSettingsController, :edit_bio
+    post "/users/settings/edit_bio", UserSettingsController, :edit_bio
 
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings", UserSettingsController, :update
