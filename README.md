@@ -34,7 +34,12 @@ Michael Lubas ([Paraxial.io](https://paraxial.io/)) - https://www.linkedin.com/i
 
 Jonathan Kilby - https://www.linkedin.com/in/jonathankilby1991/
 
-## Project Sponsor
+## Project Sponsors
+
+<a href="https://erlef.org/"><img src="./assets/images/eef.png" width="300"></a>
+
+Potion Shop is funded through the generous support of the Erlang Ecosystem Foundation. 
+
 
 <a href="https://paraxial.io/"><img src="./assets/images/paraxial_logo.png" width="400"></a>
 
