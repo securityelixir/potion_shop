@@ -16,7 +16,7 @@
       <%= for review <- @reviews do %>
         <div class="bg-purple-100 border mt-4 p-1">
           <div class="font-bold text-blue-800 pb-2"><%= link(review.user.email, to: Routes.user_path(@conn, :show, review.user.id)) %></div>
-          <div><%= raw review.body %></div>
+          <div><%= review.body %></div>
           <div>Rating - <%= review.score %>/5</div>
           <br>
         </div>

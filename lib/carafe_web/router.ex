@@ -9,7 +9,7 @@ defmodule CarafeWeb.Router do
     plug :fetch_live_flash
     plug :put_root_layout, {CarafeWeb.LayoutView, :root}
     plug :protect_from_forgery
-    plug :put_secure_browser_headers
+    plug :put_secure_browser_headers, %{"content-security-policy" => "default-src 'self'"}
     plug :fetch_current_user
   end
 
@@ -18,8 +18,9 @@ defmodule CarafeWeb.Router do
     plug :fetch_session
     plug :fetch_live_flash
     plug :put_root_layout, {CarafeWeb.LayoutView, :root}
-    plug :put_secure_browser_headers
+    plug :put_secure_browser_headers, %{"content-security-policy" => "default-src 'self'"}
     plug :fetch_current_user
+    plug :protect_from_forgery
   end
 
   pipeline :api do
@@ -95,7 +96,6 @@ defmodule CarafeWeb.Router do
   scope "/", CarafeWeb do
     pipe_through [:browser, :require_authenticated_user]
 
-    get "/users/settings/edit_bio", UserSettingsController, :edit_bio
     post "/users/settings/edit_bio", UserSettingsController, :edit_bio
 
     get "/users/settings", UserSettingsController, :edit
