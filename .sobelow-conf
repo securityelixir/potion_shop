@@ -1,0 +1,1 @@
+[verbose: false, private: false, skip: true, router: nil, exit: false, format: "json", out: nil, threshold: :low, ignore: ["Config.HTTPS"], ignore_files: [], version: false]
