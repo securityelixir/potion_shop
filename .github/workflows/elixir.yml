@@ -44,7 +44,7 @@ jobs:
     - name: Send info to Paraxial.io
       run: |
         mix paraxial.scan --github_app \
-          --install_id REPLACE_THIS_VALUE \
+          --install_id 46415655 \
           --repo_owner ${{ github.repository_owner }} \
           --repo_name ${{ env.REPO_NAME }} \
           --pr_number ${{ github.event.number }} \
