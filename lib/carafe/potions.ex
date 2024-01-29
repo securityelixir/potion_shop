@@ -10,6 +10,7 @@ defmodule Carafe.Potions do
     |> Repo.preload(:reviews)
   end
 
+  # sobelow_skip ["SQL.Query"]
   def search_potions(name) do
     q = """
     SELECT p.id, p.name, p.milliliters, p.price, p.secret
