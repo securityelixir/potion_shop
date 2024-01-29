@@ -23,6 +23,11 @@ config :carafe, CarafeWeb.Endpoint,
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   url: [host: "example.com", port: 80]
 
+config :paraxial,
+  paraxial_api_key: System.get_env("PARAXIAL_API_KEY"),
+  paraxial_url: "https://app.paraxial.io",
+  fetch_cloud_ips: true
+
 #
 # The `cipher_suite` is set to `:strong` to support only the
 # latest and more secure SSL ciphers. This means old browsers
