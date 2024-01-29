@@ -66,7 +66,7 @@ config :carafe, CarafeWeb.Endpoint,
   ]
 
 # Do not include metadata nor timestamps in development logs
-config :logger, :console, format: "[$level] $message\n"
+config :logger, level: :debug
 
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
@@ -77,4 +77,7 @@ config :phoenix, :plug_init_mode, :runtime
 
 config :paraxial,
   paraxial_api_key: System.get_env("PARAXIAL_API_KEY"),
-  paraxial_url: "https://app.paraxial.io"
+  paraxial_url: "https://app.paraxial.io",
+  fetch_cloud_ips: true
+
+# exploit_guard: :monitor
