@@ -53,7 +53,8 @@ defmodule Carafe.MixProject do
       {:tailwind, "~> 0.1.8", runtime: Mix.env() == :dev},
       {:paginator, "~> 1.0.0"},
       {:sobelow, "~> 0.13", runtime: false},
-      {:paraxial, "~> 2.6.3"}
+      {:paraxial, "~> 2.6.3"},
+      {:remote_ip, "~>1.1.0"}
     ]
   end
 

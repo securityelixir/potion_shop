@@ -1,5 +1,6 @@
 defmodule CarafeWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :carafe
+  plug RemoteIp
   plug Paraxial.AllowedPlug
   plug Paraxial.RecordPlug
   plug Paraxial.RecordPlug
