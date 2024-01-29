@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :carafe, Carafe.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "backend_stuff",
+  password: "blork_erlang",
   hostname: "localhost",
   database: "carafe_dev",
   stacktrace: true,
@@ -74,3 +74,7 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :paraxial,
+  paraxial_api_key: System.get_env("PARAXIAL_API_KEY"),
+  paraxial_url: "https://app.paraxial.io"
