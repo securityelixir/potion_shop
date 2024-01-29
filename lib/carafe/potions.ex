@@ -11,7 +11,6 @@ defmodule Carafe.Potions do
   end
 
   def search_potions(name) do
-    # sobelow_skip
     q = """
     SELECT p.id, p.name, p.milliliters, p.price, p.secret
     FROM potions AS p
