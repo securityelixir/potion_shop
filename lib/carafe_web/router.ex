@@ -11,6 +11,7 @@ defmodule CarafeWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers, %{"content-security-policy" => "default-src 'self'"}
     plug :fetch_current_user
+    plug Paraxial.CurrentUserPlug
   end
 
   pipeline :browser_auth do
