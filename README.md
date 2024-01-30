@@ -19,6 +19,10 @@ Phoenix "~> 1.5.15"
 * Create and migrate your database with `mix ecto.setup`
 * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 ```
+## Docker instructions
+1. Ensure that dev.exs has ip set to 0.0.0.0.
+2. Run `docker-compose up`.
+
 
 ## Getting Started
 
