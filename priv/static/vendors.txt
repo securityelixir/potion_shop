@@ -1,0 +1,133 @@
+Apple Inc.,1976,United States
+Microsoft Corporation,1975,United States
+Amazon.com Inc.,1994,United States
+Alphabet Inc. (Google),1998,United States
+Facebook Inc. (Meta),2004,United States
+Alibaba Group Holding,1999,China
+Tencent Holdings Limited,1998,China
+Samsung Electronics,1938,South Korea
+Toyota Motor Corporation,1937,Japan
+ExxonMobil Corporation,1999 (Merger),United States
+JPMorgan Chase & Co.,2000 (Merger),United States
+Saudi Aramco,1933,Saudi Arabia
+Berkshire Hathaway Inc.,1839,United States
+Visa Inc.,1958,United States
+Johnson & Johnson,1886,United States
+Procter & Gamble Co.,1837,United States
+General Electric Company,1892,United States
+Intel Corporation,1968,United States
+Cisco Systems Inc.,1984,United States
+Adobe Inc.,1982,United States
+Toyota Motor Corporation,1937,Japan
+Nestle S.A.,1905,Switzerland
+Royal Dutch Shell,1907,Netherlands/United Kingdom
+Chevron Corporation,1879,United States
+Walmart Inc.,1962,United States
+The Coca-Cola Company,1892,United States
+Pfizer Inc.,1849,United States
+IBM (International Business Machines),1911,United States
+3M Company,1902,United States
+The Walt Disney Company,1923,United States
+Merck & Co. Inc.,1891,United States
+Oracle Corporation,1977,United States
+IBM (International Business Machines),1911,United States
+Sony Corporation,1946,Japan
+Honda Motor Co. Ltd.,1948,Japan
+Ford Motor Company,1903,United States
+General Motors Company,1908,United States
+Boeing Company,1916,United States
+Lockheed Martin Corporation,1995 (Merger),United States
+Siemens AG,1847,Germany
+Mitsubishi Corporation,1950,Japan
+Volkswagen Group,1937,Germany
+ABB Group,1988,Switzerland
+BHP Group Limited,1885,Australia
+Rio Tinto Group,1873,United Kingdom
+Deutsche Bank AG,1870,Germany
+UBS Group AG,1862,Switzerland
+Goldman Sachs Group Inc.,1869,United States
+Morgan Stanley,1935,United States
+Citi (Citigroup Inc.),1812,United States
+Bank of America Corporation,1998 (Merger),United States
+UBS Group AG,1862,Switzerland
+HSBC Holdings plc,1865,United Kingdom
+BP p.l.c.,1909,United Kingdom
+ExxonMobil Corporation,1999 (Merger),United States
+Shell (Royal Dutch Shell),1907,Netherlands/United Kingdom
+TotalEnergies SE,1924,France
+ENI S.p.A.,1953,Italy
+Samsung Electronics,1938,South Korea
+LG Corporation,1947,South Korea
+Hyundai Motor Company,1967,South Korea
+Sony Corporation,1946,Japan
+Panasonic Corporation,1918,Japan
+Hitachi Ltd.,1910,Japan
+Nissan Motor Co. Ltd.,1933,Japan
+Toshiba Corporation,1939,Japan
+SoftBank Group Corp.,1981,Japan
+Sony Corporation,1946,Japan
+Canon Inc.,1937,Japan
+Nokia Corporation,1865,Finland
+Ericsson,1876,Sweden
+ABB Group,1988,Switzerland
+Novartis International AG,1996 (Merger),Switzerland
+GlaxoSmithKline plc,2000 (Merger),United Kingdom
+AstraZeneca plc,1999 (Merger),United Kingdom
+Royal Philips,1891,Netherlands
+ASML Holding N.V.,1984,Netherlands
+Tencent Holdings Limited,1998,China
+Baidu Inc.,2000,China
+Alibaba Group Holding,1999,China
+JD.com Inc.,1998,China
+Tencent Holdings Limited,1998,China
+Alibaba Group Holding,1999,China
+China Mobile Limited,1997,China
+China Petroleum & Chemical Corporation (Sinopec),2000 (Merger),China
+ICBC (Industrial and Commercial Bank of China),1984,China
+China Construction Bank Corporation,1954,China
+Bank of China Limited,1912,China
+China Life Insurance Company Limited,1949,China
+Meituan Dianping,2010,China
+Xiaomi Corporation,2010,China
+TikTok (ByteDance),2012,China
+TSMC (Taiwan Semiconductor Manufacturing Company),1987,Taiwan
+Samsung Electronics,1938,South Korea
+SK Group,1953,South Korea
+POSCO (Pohang Iron and Steel Company),1968,South Korea
+Hyundai Motor Company,1967,South Korea
+Reliance Industries Limited,1973,India
+Tata Group,1868,India
+Infosys Limited,1981,India
+Samsung Electronics,1938,South Korea
+Taiwan Semiconductor Manufacturing Company (TSMC),1987,Taiwan
+Alibaba Group Holding,1999,China
+Tencent Holdings Limited,1998,China
+JD.com Inc.,1998,China
+Baidu Inc.,2000,China
+ICBC (Industrial and Commercial Bank of China),1984,China
+China Construction Bank Corporation,1954,China
+Bank of China Limited,1912,China
+China Mobile Limited,1997,China
+Ping An Insurance (Group) Company of China Ltd.,1988,China
+China Life Insurance Company Limited,1949,China
+Meituan Dianping,2010,China
+Xiaomi Corporation,2010,China
+TikTok (ByteDance),2012,China
+TSMC (Taiwan Semiconductor Manufacturing Company),1987,Taiwan
+Samsung Electronics,1938,South Korea
+SK Group,1953,South Korea
+POSCO (Pohang Iron and Steel Company),1968,South Korea
+Hyundai Motor Company,1967,South Korea
+Reliance Industries Limited,1973,India
+Tata Group,1868,India
+Infosys Limited,1981,India
+ASML Holding N.V.,1984,Netherlands
+Philips,1891,Netherlands
+Unilever,1930,Netherlands/United Kingdom
+Royal Dutch Shell,1907,Netherlands/United Kingdom
+Heineken N.V.,1864,Netherlands
+Nestle S.A.,1905,Switzerland
+Novartis International AG,1996 (Merger),Switzerland
+ABB Group,1988,Switzerland
+Roche Holding AG,1896,Switzerland
+UBS Group AG,1862,Switzerland

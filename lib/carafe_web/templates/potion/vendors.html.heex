@@ -1,0 +1,30 @@
+<div class="mt-8">
+  <div class="pb-4">
+    Displaying records <%= @first %> to <%= @last %>
+  </div>
+  <table class="min-w-full border">
+    <!-- Table Headers -->
+    <tr>
+      <th class="p-2 border">Name</th>
+      <th class="p-2 border">Year Founded</th>
+      <th class="p-2 border">Country</th>
+    </tr>
+    <!-- Table Rows -->
+    <%= for vendor <- @vendors do %>
+    <tr class="odd:bg-gray-100">
+      <td class="p-2 border"><%= vendor.name %></td>
+      <td class="p-2 border"><%= vendor.year %></td>
+      <td class="p-2 border"><%= vendor.country %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <div class="pt-4">
+    Record Selector
+    <%= form_for @conn, Routes.potion_path(@conn, :vendors), [method: :get], fn f -> %>
+      <%= number_input f, :first, placeholder: "First (ex: 1)", class: "rounded-xl", required: true %>
+      <%= number_input f, :last, placeholder: "Last (ex: 10)", class: "rounded-xl", required: true %>
+      <%= submit "Enter", class: "bg-purple-800 hover:bg-purple-900 text-white py-2 px-4 rounded shadow" %>
+    <% end %>
+  </div>
+</div>

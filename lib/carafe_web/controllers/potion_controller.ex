@@ -4,6 +4,7 @@ defmodule CarafeWeb.PotionController do
   alias Carafe.Potions
   alias Carafe.Accounts
   alias Carafe.Review
+  alias Carafe.Vendors
 
   def index(conn, %{"name" => name}) do
     potions = Potions.search_potions(name)
@@ -40,6 +41,27 @@ defmodule CarafeWeb.PotionController do
       {:error, changeset} ->
         render(conn, "show.html", potion: potion, changeset: changeset)
     end
+  end
+
+  def vendors(conn, %{"first" => first, "last" => last}) do
+    range = String.to_integer(first)..String.to_integer(last)
+    cursor = :erlang.term_to_binary(range) |> Base.encode64()
+
+    conn
+    |> redirect(to: Routes.potion_path(conn, :vendors, cursor: cursor))
+  end
+
+  def vendors(conn, %{"cursor" => c}) do
+    cursor_bin = Base.decode64!(c)
+    cursor = Plug.Crypto.non_executable_binary_to_term(cursor_bin, [:safe])
+
+    cursor_list = Enum.to_list(cursor)
+    first = Enum.min(cursor_list)
+    last = Enum.max(cursor_list)
+
+    vendors = Vendors.get_vendors()
+    rv = Enum.slice(vendors, first..last)
+    render(conn, "vendors.html", vendors: rv, first: first, last: last)
   end
 
   def api(conn, %{"after" => a}) do
