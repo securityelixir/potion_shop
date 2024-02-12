@@ -4,7 +4,7 @@ import Config
 config :carafe, Carafe.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
+  hostname: "db",
   database: "carafe_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
