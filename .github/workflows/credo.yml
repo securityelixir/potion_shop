@@ -1,0 +1,64 @@
+name: Elixir CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ "master" ]
+  push:
+    branches: [ "master"]
+
+permissions:
+  contents: read
+
+jobs:
+  credo-scan:
+    permissions:
+      contents: read
+      actions: read
+      
+    name: Credo Scan
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1.17.5
+      with:
+        elixir-version: '1.15.2' # [Required] Define the Elixir version
+        otp-version: '26.0'      # [Required] Define the Erlang/OTP version
+    - name: Install dependencies
+      run: mix deps.get
+    - name: compile dependencies
+      run: mix deps.compile
+    - name: compile
+      run: mix compile
+    - name: credo-scan
+      run: mix credo --format=sarif | tee credo_output.sarif
+    - name: Upload SARIF file
+      uses: actions/upload-artifact@v4
+      with:
+        name: credo-sarif
+        path: credo_output.sarif
+
+  upload-sarif:
+    needs: credo-scan
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+      
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Download All Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: credo-sarif
+    - name: Display structure of downloaded files
+      run: ls -R
+    - name: upload sarif file
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: ./credo_output.sarif
+        token: ${{ secrets.GITHUB_TOKEN }}
