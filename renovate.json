@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "description": "Renovate config for an Elixir project",
+  "enabledManagers": ["mix"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [".*"],
+      "groupName": "elixir dependencies",
+      "groupSlug": "elixir-deps",
+      "schedule": ["every 1 hour"],
+      "automerge": false
+    }
+  ],
+  "labels": ["dependencies", "renovate"],
+  "timezone": "UTC",
+  "dependencyDashboard": true,
+  "commitMessagePrefix": "deps:",
+  "branchPrefix": "renovate/"
+}
