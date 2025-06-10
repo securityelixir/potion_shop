@@ -1,3 +1,5 @@
+name: Sobelow
+
 on: [push]
 
 jobs:
