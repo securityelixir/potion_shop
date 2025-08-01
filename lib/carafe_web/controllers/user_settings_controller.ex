@@ -16,6 +16,7 @@ defmodule CarafeWeb.UserSettingsController do
         conn
         |> put_flash(:info, "Bio Update Successful")
         |> redirect(to: Routes.user_settings_path(conn, :edit))
+
       {:error, changeset} ->
         render(conn, "edit.html", bio_changeset: changeset)
     end

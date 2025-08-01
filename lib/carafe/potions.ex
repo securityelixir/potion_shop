@@ -16,8 +16,10 @@ defmodule Carafe.Potions do
     FROM potions as p
     WHERE p.name LIKE '%#{name}%' AND p.secret = false
     """
+
     {:ok, %{rows: rows}} =
       Ecto.Adapters.SQL.query(Repo, q)
+
     Enum.map(rows, fn row ->
       [id, name, milliliters, price, secret] = row
       %Potion{id: id, name: name, milliliters: milliliters, price: price, secret: secret}
@@ -26,14 +28,15 @@ defmodule Carafe.Potions do
 
   def list_potions() do
     from(p in Potion,
-      where: p.secret == false)
-    |>
-    Repo.all()
+      where: p.secret == false
+    )
+    |> Repo.all()
   end
 
   def get_reviews(potion_id) do
     from(r in Review,
-      where: r.potion_id == ^potion_id)
+      where: r.potion_id == ^potion_id
+    )
     |> Repo.all()
     |> Repo.preload(:user)
   end
