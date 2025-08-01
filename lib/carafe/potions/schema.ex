@@ -19,5 +19,4 @@ defmodule Carafe.Potion do
     |> cast(attrs, [:name, :milliliters, :price, :secret])
     |> validate_required([:name, :milliliters, :price, :secret])
   end
-
 end

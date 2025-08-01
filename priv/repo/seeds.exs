@@ -98,55 +98,46 @@ reviews = [
   %{
     "body" => "Did not work.",
     "score" => "1",
-    "user_id" => "1",
     "potion_id" => "1"
   },
   %{
     "body" => "Highly effective, great buy.",
     "score" => "5",
-    "user_id" => "1",
     "potion_id" => "2"
   },
   %{
     "body" => "Did not work.",
     "score" => "1",
-    "user_id" => "1",
     "potion_id" => "3"
   },
   %{
     "body" => "Highly effective, great buy.",
     "score" => "5",
-    "user_id" => "1",
     "potion_id" => "4"
   },
   %{
     "body" => "Did not work.",
     "score" => "1",
-    "user_id" => "1",
     "potion_id" => "5"
   },
   %{
     "body" => "Highly effective, great buy.",
     "score" => "5",
-    "user_id" => "1",
     "potion_id" => "6"
   },
   %{
     "body" => "Did not work.",
     "score" => "1",
-    "user_id" => "1",
     "potion_id" => "7"
   },
   %{
     "body" => "Highly effective, great buy.",
     "score" => "5",
-    "user_id" => "1",
     "potion_id" => "8"
   },
   %{
     "body" => "Did not work.",
     "score" => "1",
-    "user_id" => "1",
     "potion_id" => "9"
   }
 ]
@@ -156,5 +147,5 @@ Enum.each(potions, fn p ->
 end)
 
 Enum.each(reviews, fn r ->
-  Potions.create_review(r)
+  Potions.create_review(1, r)
 end)
