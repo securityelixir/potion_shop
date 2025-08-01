@@ -1,0 +1,32 @@
+
+version: '2.23.3'
+
+services:
+   phoenix:
+      build: 
+         context: .
+      environment:
+         PGHOST: db
+      ports:
+       - '4000:4000'
+      depends_on:
+          db:
+            condition: service_healthy
+      command: bash -c "mix ecto.setup &&  mix phx.server"
+   db:
+      # Postgres
+      image: postgres:latest
+      environment:
+         POSTGRES_USER: postgres
+         POSTGRES_PASSWORD: postgres
+         POSTGRES_DB: /var/lib/postgresql/data/pgdb
+      restart: always
+      healthcheck:
+       test: ["CMD-SHELL", "pg_isready -U postgres"]
+       interval: 5s
+       timeout: 5s
+       retries: 5
+      volumes:
+         - pgdb:/var/lib/postgresql/data
+volumes:
+   pgdb:
